@@ -117,6 +117,11 @@ export default function RegisterVideo() {
                                 value={formCadastro.values.url}
                                 onChange={formCadastro.handleChange}
                             />
+                            <img src={
+                                formCadastro.values.url ?
+                                    getThumbnail(formCadastro.values.url)
+                                    : false
+                            } />
                             <button type="submit">
                                 Adicionar
                             </button>
