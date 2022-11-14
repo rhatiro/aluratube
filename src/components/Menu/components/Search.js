@@ -4,13 +4,14 @@ import styled from "styled-components"
 const StyledSearch = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid ${({ theme }) => theme.borderBase};
+  /* border: 1px solid ${({ theme }) => theme.borderBase}; */
   max-width: 425px;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 20px;
   overflow: hidden;
   
   input {
+    text-align: center;
     width: 80%;
     padding: 4px 6px;
     border: none;

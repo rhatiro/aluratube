@@ -85,20 +85,6 @@ export default function RegisterVideo() {
                             <button type="button" className="close-modal" onClick={() => setFormVisivel(false)}>
                                 X
                             </button>
-                            <input
-                                placeholder="Título do vídeo"
-                                name="titulo"
-                                value={formCadastro.values.titulo}
-                                onChange={formCadastro.handleChange}
-                            />
-                            <input
-                                required
-                                placeholder="URL"
-                                name="url"
-                                value={formCadastro.values.url}
-                                onChange={formCadastro.handleChange}
-                            />
-
                             <select
                                 required
                                 name="playlist"
@@ -117,6 +103,20 @@ export default function RegisterVideo() {
                                 value={formCadastro.values.playlist}
                                 onChange={formCadastro.handleChange}
                             /> */}
+
+                            <input
+                                placeholder="Título do vídeo"
+                                name="titulo"
+                                value={formCadastro.values.titulo}
+                                onChange={formCadastro.handleChange}
+                            />
+                            <input
+                                required
+                                placeholder="URL"
+                                name="url"
+                                value={formCadastro.values.url}
+                                onChange={formCadastro.handleChange}
+                            />
                             <button type="submit">
                                 Adicionar
                             </button>
