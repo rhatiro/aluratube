@@ -20,8 +20,9 @@ export const StyledRegisterVideo = styled.div`
     height: 25px;
     position: absolute;
     top: 8px;
-    right: 16px;
+    right: 8px;
     color: inherit;
+    font-weight: bold;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -37,7 +38,7 @@ export const StyledRegisterVideo = styled.div`
   form {
     width: 100%;
     padding: 5%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
     position: fixed;
     top: 0; bottom: 0;
     left: 0; right: 0;
@@ -46,13 +47,16 @@ export const StyledRegisterVideo = styled.div`
     justify-content: center;
     & > div {
       flex: 1;
+      height: min-content;
       border-radius: 8px;
       max-width: 320px;
-      background-color: ${({ theme }) => theme.backgroundLevel2};
+      /* background-color: ${({ theme }) => theme.backgroundLevel2}; */
+      background-color: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
       display: flex;
       flex-direction: column;
       position: relative;
-      padding: 16px;
+      padding: 32px;
       padding-top: 40px;
     }
   }
