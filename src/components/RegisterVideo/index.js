@@ -92,6 +92,7 @@ export default function RegisterVideo() {
                                 onChange={formCadastro.handleChange}
                             />
                             <input
+                                required
                                 placeholder="URL"
                                 name="url"
                                 value={formCadastro.values.url}
@@ -99,6 +100,7 @@ export default function RegisterVideo() {
                             />
 
                             <select
+                                required
                                 name="playlist"
                                 onChange={formCadastro.handleChange}
                             >
