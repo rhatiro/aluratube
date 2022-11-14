@@ -10,7 +10,7 @@ export const StyledRegisterVideo = styled.div`
     bottom: 16px;
     right: 16px;
     border: 0;
-    background-color: red;
+    background-color: #61dafb;
     border-radius: 50%;
     z-index: 99;
     cursor: pointer;
@@ -27,7 +27,7 @@ export const StyledRegisterVideo = styled.div`
     cursor: pointer;
   }
   button[type="submit"] {
-    background-color: red;
+    background-color: #61dafb;
     padding: 8px 16px;
     border: none;
     border-radius: 2px;

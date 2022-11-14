@@ -11,11 +11,11 @@ function HomePage() {
     const [playlists, setPlaylists] = React.useState({});   // config.playlists
 
     React.useEffect(() => {
-        console.log("useEffect");
+        // console.log("useEffect");
         service
             .getAllVideos()
             .then((dados) => {
-                console.log(dados.data);
+                // console.log(dados.data);
                 // Forma imutável
                 const novasPlaylists = { ...playlists };
                 dados.data.forEach((video) => {
@@ -26,7 +26,7 @@ function HomePage() {
             });
     }, [])
 
-    console.log("Playlists Pronto", playlists);
+    // console.log("Playlists Pronto", playlists);
 
     return (
         <>
@@ -74,10 +74,13 @@ const StyledHeader = styled.div`
     }
 `;
 const StyledBanner = styled.div`
-    background-color: blue;
+    background-color: black;
     background-image: url(${({ bg }) => bg});
     /* background-image: url(${config.bg}); */
     height: 230px;
+    //
+    background-size: cover;
+    background-position: 0% 20%;
 `;
 function Header() {
     return (

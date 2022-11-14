@@ -9,7 +9,7 @@ function useForm(propsDoForm) {
     return {
         values,
         handleChange: (evento) => {
-            console.log(evento.target);
+            // console.log(evento.target);
             const value = evento.target.value;
             const name = evento.target.name
             setValues({
@@ -34,11 +34,11 @@ function getThumbnail(url) {
 
 export default function RegisterVideo() {
     const formCadastro = useForm({
-        initialValues: { titulo: "Frost punk", url: "https://www.youtube.com/watch?v=QsqatJxAUtk" }
+        initialValues: { titulo: "", url: "" }
     });
-    const [formVisivel, setFormVisivel] = React.useState(true);
+    const [formVisivel, setFormVisivel] = React.useState(false);
 
-    console.log();
+    // console.log();
 
     /* 
     ## O que precisamos para o form funcionar?
@@ -60,7 +60,7 @@ export default function RegisterVideo() {
                 ? (
                     <form onSubmit={(evento) => {
                         evento.preventDefault();
-                        console.log(formCadastro.values);
+                        // console.log(formCadastro.values);
 
                         // Contrato entre o nosso Front e o BackEnd
                         supabase.from("video").insert({
@@ -70,10 +70,10 @@ export default function RegisterVideo() {
                             playlist: "jogos",
                         })
                             .then((oqueveio) => {
-                                console.log(oqueveio);
+                                // console.log(oqueveio);
                             })
                             .catch((err) => {
-                                console.log(err);
+                                // console.log(err);
                             })
 
                         setFormVisivel(false);
