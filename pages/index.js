@@ -34,7 +34,7 @@ function HomePage() {
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                // backgroundColor: "red",
+                // backgroundColor: "blue",
             }}>
                 {/* Prop Drilling */}
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
@@ -124,7 +124,7 @@ function Timeline({ searchValue, ...propriedades }) {
                                 })
                                 .map((video) => {
                                     return (
-                                        <a key={video.url} href={video.url}>
+                                        <a key={video.url} href={video.url} target="_blank">
                                             <img src={video.thumb} />
                                             <span>
                                                 {video.title}

@@ -63,12 +63,14 @@ export default function RegisterVideo() {
                         // console.log(formCadastro.values);
 
                         // Contrato entre o nosso Front e o BackEnd
-                        supabase.from("video").insert({
-                            title: formCadastro.values.titulo,
-                            url: formCadastro.values.url,
-                            thumb: getThumbnail(formCadastro.values.url),
-                            playlist: "jogos",
-                        })
+                        supabase
+                            .from("video")
+                            .insert({
+                                title: formCadastro.values.titulo,
+                                url: formCadastro.values.url,
+                                thumb: getThumbnail(formCadastro.values.url),
+                                playlist: formCadastro.values.playlist,
+                            })
                             .then((oqueveio) => {
                                 // console.log(oqueveio);
                             })
@@ -95,8 +97,26 @@ export default function RegisterVideo() {
                                 value={formCadastro.values.url}
                                 onChange={formCadastro.handleChange}
                             />
+
+                            <select
+                                name="playlist"
+                                onChange={formCadastro.handleChange}
+                            >
+                                <option value="" disabled selected hidden>Selecione a playlist...</option>
+                                {/* <option value="jogos">Jogos</option> */}
+                                {/* <option value="front-end">Front-End</option> */}
+                                {/* <option value="back-end">Back-End</option> */}
+                                <option value="Imersão React" disabled>Imersão React</option>
+                                <option value="Novos vídeos">Novas adições</option>
+                            </select>
+                            {/* <input
+                                placeholder="Playlist"
+                                name="playlist"
+                                value={formCadastro.values.playlist}
+                                onChange={formCadastro.handleChange}
+                            /> */}
                             <button type="submit">
-                                Cadastrar
+                                Adicionar
                             </button>
                         </div>
                     </form>
