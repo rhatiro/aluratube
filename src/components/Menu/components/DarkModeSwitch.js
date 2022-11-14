@@ -20,7 +20,7 @@ const StyledSwitch = styled.div`
   
   label:before {
     content: "";
-    background-color: #fafafa;
+    background-color: #61dafb;
     border: 1px solid #333333;
     width: 24px;
     height: 24px;
