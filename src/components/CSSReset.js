@@ -8,7 +8,7 @@ export const CSSReset = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    transition: .3s;
+    transition: .6s;
     font-family: sans-serif;
     background-color: ${({ theme }) => theme.backgroundBase};
     color: ${({ theme }) => theme.textColorBase};
@@ -32,7 +32,7 @@ export const CSSReset = createGlobalStyle`
   a {
     text-decoration: none;
     opacity: 1;
-    transition: .3s;
+    transition: .6s;
     &:hover,
     &:focus {
       opacity: .5;

@@ -18,6 +18,7 @@ const StyledSearch = styled.div`
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
     background-color: ${({ theme }) => theme.backgroundBase};
+    transition: .6s;
   }
   button {
     flex: 1;

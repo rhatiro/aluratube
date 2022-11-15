@@ -59,7 +59,7 @@ export default HomePage
 
 const StyledHeader = styled.div`
     background-color: ${({ theme }) => theme.backgroundLevel1};
-
+    transition: .6s;
     img {
         width: 80px;
         height: 80px;
