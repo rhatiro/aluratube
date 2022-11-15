@@ -23,7 +23,8 @@ const StyledSearch = styled.div`
     flex: 1;
     cursor: pointer;
     border: none;
-    background-color: ${({ theme }) => theme.backgroundLevel2};
+    /* background-color: ${({ theme }) => theme.backgroundLevel2}; */
+    background-color: #61dafb;
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
     border-left: 1px solid ${({ theme }) => theme.borderBase};
     width: 40px;
