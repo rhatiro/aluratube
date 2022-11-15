@@ -80,6 +80,9 @@ export default function RegisterVideo() {
 
                         setFormVisivel(false);
                         formCadastro.clearForm();
+
+                        window.location.reload()
+
                     }}>
                         <div>
                             <button type="button" className="close-modal" onClick={() => setFormVisivel(false)}>
@@ -95,7 +98,7 @@ export default function RegisterVideo() {
                                 {/* <option value="front-end">Front-End</option> */}
                                 {/* <option value="back-end">Back-End</option> */}
                                 <option value="Imersão React" disabled>Imersão React</option>
-                                <option value="Novos vídeos">Novas adições</option>
+                                <option value="Novos vídeos">Novos vídeos</option>
                             </select>
                             {/* <input
                                 placeholder="Playlist"
