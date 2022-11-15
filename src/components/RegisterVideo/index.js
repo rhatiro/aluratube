@@ -81,8 +81,6 @@ export default function RegisterVideo() {
                         setFormVisivel(false);
                         formCadastro.clearForm();
 
-                        window.location.reload()
-
                     }}>
                         <div>
                             <button type="button" className="close-modal" onClick={() => setFormVisivel(false)}>
