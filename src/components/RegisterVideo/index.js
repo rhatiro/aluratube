@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { useRouter } from "next/router";
 import React from "react";
 import { StyledRegisterVideo } from "./styles";
 
@@ -38,6 +39,8 @@ export default function RegisterVideo() {
     });
     const [formVisivel, setFormVisivel] = React.useState(false);
 
+    const router = useRouter();
+
     // console.log();
 
     /* 
@@ -73,6 +76,7 @@ export default function RegisterVideo() {
                             })
                             .then((oqueveio) => {
                                 // console.log(oqueveio);
+                                router.reload()
                             })
                             .catch((err) => {
                                 // console.log(err);
