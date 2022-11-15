@@ -5,7 +5,7 @@ export const StyledRegisterVideo = styled.div`
     width: 50px;
     height: 50px;
     font-size: 20px;
-    color: inherit;
+    color: ${({ theme }) => theme.backgroundBase};
     position: fixed;
     bottom: 16px;
     right: 16px;
