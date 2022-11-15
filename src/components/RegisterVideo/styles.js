@@ -21,7 +21,7 @@ export const StyledRegisterVideo = styled.div`
     position: absolute;
     top: 8px;
     right: 8px;
-    color: inherit;
+    color: #61dafb;
     font-weight: bold;
     background-color: transparent;
     border: none;
