@@ -91,23 +91,23 @@ export default function RegisterVideo() {
                                 X
                             </button>
                             <select
-                                required
+                                // required
                                 name="playlist"
                                 onChange={formCadastro.handleChange}
                             >
-                                <option value="" disabled selected hidden>Selecione a playlist...</option>
+                                <option value="" disabled selected hidden>Selecione uma playlist...</option>
                                 {/* <option value="jogos">Jogos</option> */}
                                 {/* <option value="front-end">Front-End</option> */}
                                 {/* <option value="back-end">Back-End</option> */}
                                 <option value="Imersão React" disabled>Imersão React</option>
                                 <option value="Novos vídeos">Novos vídeos</option>
                             </select>
-                            {/* <input
-                                placeholder="Playlist"
+                            <input
+                                placeholder="...ou crie uma nova"
                                 name="playlist"
                                 value={formCadastro.values.playlist}
                                 onChange={formCadastro.handleChange}
-                            /> */}
+                            />
 
                             <input
                                 placeholder="Título do vídeo"
