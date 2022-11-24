@@ -2,6 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
 import React from "react";
 import { StyledRegisterVideo } from "./styles";
+import SupabasePlaylists from "./SupabasePlaylists";
 
 // Whiteboarding
 // Custom Hook
@@ -12,7 +13,7 @@ function useForm(propsDoForm) {
         handleChange: (evento) => {
             // console.log(evento.target);
             const value = evento.target.value;
-            const name = evento.target.name
+            const name = evento.target.name;
             setValues({
                 ...values,
                 [name]: value,
@@ -40,6 +41,8 @@ export default function RegisterVideo() {
     const [formVisivel, setFormVisivel] = React.useState(false);
 
     const router = useRouter();
+
+    const [selectVisivel, setSelectVisivel] = React.useState(true);
 
     // console.log();
 
@@ -72,7 +75,7 @@ export default function RegisterVideo() {
                                 title: formCadastro.values.titulo,
                                 url: formCadastro.values.url,
                                 thumb: getThumbnail(formCadastro.values.url),
-                                playlist: formCadastro.values.playlist,
+                                playlist: formCadastro.values.playlist.charAt(0).toUpperCase() + formCadastro.values.playlist.slice(1),
                             })
                             .then((oqueveio) => {
                                 // console.log(oqueveio);
@@ -90,23 +93,41 @@ export default function RegisterVideo() {
                             <button type="button" className="close-modal" onClick={() => setFormVisivel(false)}>
                                 X
                             </button>
-                            <select
-                                // required
-                                name="playlist"
-                                onChange={formCadastro.handleChange}
-                            >
-                                <option value="" disabled selected hidden>Selecione uma playlist...</option>
-                                {/* <option value="jogos">Jogos</option> */}
-                                {/* <option value="front-end">Front-End</option> */}
-                                {/* <option value="back-end">Back-End</option> */}
-                                <option value="Imersão React" disabled>Imersão React</option>
-                                <option value="Novos vídeos">Novos vídeos</option>
-                            </select>
+
+                            {selectVisivel
+                                ? (
+                                    <select
+                                        defaultValue={'DEFAULT'}
+                                        name="playlist"
+                                        onChange={formCadastro.handleChange}
+                                    >
+                                        <option value="DEFAULT" disabled hidden>Selecione uma playlist...</option>
+
+                                        {/* <option value="jogos">Jogos</option> */}
+                                        {/* <option value="front-end">Front-End</option> */}
+                                        {/* <option value="back-end">Back-End</option> */}
+
+                                        <option value="Imersão React" disabled>Imersão React</option>
+
+                                        {/* <option value="Novos vídeos">Novos vídeos</option> */}
+
+                                        <SupabasePlaylists />
+
+                                    </select>
+                                )
+                                : false
+                            }
+
                             <input
                                 placeholder="...ou crie uma nova"
                                 name="playlist"
-                                value={formCadastro.values.playlist}
-                                onChange={formCadastro.handleChange}
+                                defaultValue={formCadastro.values.playlist}
+                                onChange={
+                                    // () => {
+                                    // setSelectVisivel(false);
+                                    formCadastro.handleChange
+                                    // }
+                                }
                             />
 
                             <input
@@ -125,7 +146,7 @@ export default function RegisterVideo() {
                             <img src={
                                 formCadastro.values.url ?
                                     getThumbnail(formCadastro.values.url)
-                                    : false
+                                    : null
                             } />
                             <button type="submit">
                                 Adicionar

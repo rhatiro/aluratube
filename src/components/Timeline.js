@@ -8,7 +8,7 @@ export const StyledTimeline = styled.div`
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
   }
   img {
     aspect-ratio: 16/9;
