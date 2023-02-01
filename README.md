@@ -28,25 +28,10 @@ O design original pode ser consultado através deste [link](https://www.figma.co
 
 ### Captura de tela
 
-<div style="
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-">
-  <img src="src/img/screenshot-fullscreen-dark.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
-  <img src="src/img/screenshot-fullscreen-light.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
-  <img src="src/img/screenshot-form-dark.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
+<img src="src/img/screenshot-fullscreen-dark.png" width="98.25%">
+<div>
+  <img src="src/img/screenshot-fullscreen-light.png" width="60.5%">
+  <img src="src/img/screenshot-form-dark.png"  width="37.37%">
 </div>
 
 ## Desenvolvido com
@@ -119,25 +104,10 @@ The original design can be consulted through this [link](https://www.figma.com/f
 
 ### Screenshots
 
-<div style="
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-">
-  <img src="src/img/screenshot-fullscreen-dark.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
-  <img src="src/img/screenshot-fullscreen-light.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
-  <img src="src/img/screenshot-form-dark.png" style="
-    margin: 5px;
-    padding: 0 50px;
-  ">
+<img src="src/img/screenshot-fullscreen-dark.png" width="98.25%">
+<div>
+  <img src="src/img/screenshot-fullscreen-light.png" width="60.5%">
+  <img src="src/img/screenshot-form-dark.png"  width="37.37%">
 </div>
 
 ## Built with
